@@ -1,0 +1,85 @@
+<div class="group column-layout">
+  <igx-list *ngFor="let item of northwindEmployees" class="list">
+    <igx-list-item [isHeader]="false" class="list-item">
+      <span igxListThumbnail>
+        <igx-avatar [src]="item.avatarUrl" [roundShape]="true"></igx-avatar>
+      </span>
+      <span igxListLineTitle>{{ item.lastName }}</span>
+      <span igxListLineSubTitle>{{ item.firstName }}</span>
+      <span igxListAction>
+        <igx-icon class="icon">
+          star
+        </igx-icon>
+      </span>
+    </igx-list-item>
+  </igx-list>
+</div>
+<div class="group_3 column-layout">
+  <div class="group_1 column-layout">
+    <igx-card type="outlined" *ngFor="let item of jSONNorthwindCustomersCustomers" class="card">
+      <igx-card-header>
+        <h3 igxCardHeaderTitle>
+          {{ item.CompanyName }}
+        </h3>
+        <h5 igxCardHeaderSubtitle>
+          {{ item.ContactName }}
+        </h5>
+      </igx-card-header>
+      <igx-card-content class="body-content">
+        <p class="text">
+          {{ item.Country }}
+        </p>
+      </igx-card-content>
+    </igx-card>
+  </div>
+  <div class="group_2 column-layout">
+    <igx-grid [data]="openAPIWebinarApiOrders" primaryKey="orderID" displayDensity="cosy" class="grid">
+      <igx-column header="orderID" field="orderID" dataType="number" [sortable]="true" title="orderID"></igx-column>
+      <igx-column header="customerID" field="customerID" dataType="string" [sortable]="true" title="customerID"></igx-column>
+      <igx-column header="employeeID" field="employeeID" dataType="number" [sortable]="true" title="employeeID"></igx-column>
+      <igx-column header="orderDate" field="orderDate" dataType="string" [sortable]="true" title="orderDate"></igx-column>
+      <igx-column header="requiredDate" field="requiredDate" dataType="string" [sortable]="true" title="requiredDate"></igx-column>
+      <igx-column header="shippedDate" field="shippedDate" dataType="string" [sortable]="true" title="shippedDate"></igx-column>
+      <igx-column header="shipVia" field="shipVia" dataType="number" [sortable]="true" title="shipVia"></igx-column>
+      <igx-column header="freight" field="freight" dataType="number" [sortable]="true" title="freight"></igx-column>
+      <igx-column header="shipName" field="shipName" dataType="string" [sortable]="true" title="shipName"></igx-column>
+      <igx-column header="shipAddress" field="shipAddress" dataType="string" [sortable]="true" title="shipAddress"></igx-column>
+      <igx-column header="shipCity" field="shipCity" dataType="string" [sortable]="true" title="shipCity"></igx-column>
+      <igx-column header="shipRegion" field="shipRegion" dataType="string" [sortable]="true" title="shipRegion"></igx-column>
+      <igx-column header="shipPostalCode" field="shipPostalCode" dataType="string" [sortable]="true" title="shipPostalCode"></igx-column>
+      <igx-column header="shipCountry" field="shipCountry" dataType="string" [sortable]="true" title="shipCountry"></igx-column>
+      <igx-column header="customerID" field="customer.customerID" dataType="string" [sortable]="true" title="customer.customerID"></igx-column>
+      <igx-column header="companyName" field="customer.companyName" dataType="string" [sortable]="true" title="customer.companyName"></igx-column>
+      <igx-column header="contactName" field="customer.contactName" dataType="string" [sortable]="true" title="customer.contactName"></igx-column>
+      <igx-column header="contactTitle" field="customer.contactTitle" dataType="string" [sortable]="true" title="customer.contactTitle"></igx-column>
+      <igx-column header="address" field="customer.address" dataType="string" [sortable]="true" title="customer.address"></igx-column>
+      <igx-column header="city" field="customer.city" dataType="string" [sortable]="true" title="customer.city"></igx-column>
+      <igx-column header="region" field="customer.region" dataType="string" [sortable]="true" title="customer.region"></igx-column>
+      <igx-column header="postalCode" field="customer.postalCode" dataType="string" [sortable]="true" title="customer.postalCode"></igx-column>
+      <igx-column header="country" field="customer.country" dataType="string" [sortable]="true" title="customer.country"></igx-column>
+      <igx-column header="phone" field="customer.phone" dataType="string" [sortable]="true" title="customer.phone"></igx-column>
+      <igx-column header="fax" field="customer.fax" dataType="string" [sortable]="true" title="customer.fax"></igx-column>
+      <igx-column header="employeeID" field="employee.employeeID" dataType="number" [sortable]="true" title="employee.employeeID"></igx-column>
+      <igx-column header="lastName" field="employee.lastName" dataType="string" [sortable]="true" title="employee.lastName"></igx-column>
+      <igx-column header="firstName" field="employee.firstName" dataType="string" [sortable]="true" title="employee.firstName"></igx-column>
+      <igx-column header="title" field="employee.title" dataType="string" [sortable]="true" title="employee.title"></igx-column>
+      <igx-column header="titleOfCourtesy" field="employee.titleOfCourtesy" dataType="string" [sortable]="true" title="employee.titleOfCourtesy"></igx-column>
+      <igx-column header="birthDate" field="employee.birthDate" dataType="string" [sortable]="true" title="employee.birthDate"></igx-column>
+      <igx-column header="hireDate" field="employee.hireDate" dataType="string" [sortable]="true" title="employee.hireDate"></igx-column>
+      <igx-column header="address" field="employee.address" dataType="string" [sortable]="true" title="employee.address"></igx-column>
+      <igx-column header="city" field="employee.city" dataType="string" [sortable]="true" title="employee.city"></igx-column>
+      <igx-column header="region" field="employee.region" dataType="string" [sortable]="true" title="employee.region"></igx-column>
+      <igx-column header="postalCode" field="employee.postalCode" dataType="string" [sortable]="true" title="employee.postalCode"></igx-column>
+      <igx-column header="country" field="employee.country" dataType="string" [sortable]="true" title="employee.country"></igx-column>
+      <igx-column header="homePhone" field="employee.homePhone" dataType="string" [sortable]="true" title="employee.homePhone"></igx-column>
+      <igx-column header="extension" field="employee.extension" dataType="string" [sortable]="true" title="employee.extension"></igx-column>
+      <igx-column header="photo" field="employee.photo" dataType="string" [sortable]="true" title="employee.photo"></igx-column>
+      <igx-column header="notes" field="employee.notes" dataType="string" [sortable]="true" title="employee.notes"></igx-column>
+      <igx-column header="reportsTo" field="employee.reportsTo" dataType="number" [sortable]="true" title="employee.reportsTo"></igx-column>
+      <igx-column header="photoPath" field="employee.photoPath" dataType="string" [sortable]="true" title="employee.photoPath"></igx-column>
+      <igx-column header="shipperID" field="shipViaNavigation.shipperID" dataType="number" [sortable]="true" title="shipViaNavigation.shipperID"></igx-column>
+      <igx-column header="companyName" field="shipViaNavigation.companyName" dataType="string" [sortable]="true" title="shipViaNavigation.companyName"></igx-column>
+      <igx-column header="phone" field="shipViaNavigation.phone" dataType="string" [sortable]="true" title="shipViaNavigation.phone"></igx-column>
+    </igx-grid>
+  </div>
+</div>
